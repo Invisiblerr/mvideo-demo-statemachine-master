@@ -1,0 +1,20 @@
+testdata: true
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/demo-statemachine
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    open-in-view: false
+    show-sql: true
+    properties.hibernate.format_sql: true
+
+logging:
+  level:
+    org.springframework.orm.jpa: DEBUG
+    org.springframework.transaction: DEBUG
+    org.springframework.transaction.interceptor: TRACE
